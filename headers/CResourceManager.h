@@ -5,7 +5,8 @@
 #include "CEngine.h"
 #include "cmrc.hpp"
 
-class CResourceManager {
+class CResourceManager 
+{
 private:
     cmrc::embedded_filesystem *m_fsResources;
     std::map<std::string, cmrc::file> m_fileList;

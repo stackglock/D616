@@ -9,7 +9,8 @@
 #include "CResourceManager.h"
 #include "CPlayer.h"
 
-class CEngine {
+class CEngine 
+{
 private:
     sf::RenderWindow *m_pWindow;
     sf::Event m_event;

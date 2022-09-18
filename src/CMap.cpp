@@ -1,5 +1,6 @@
 #include "headers/CMap.h"
 
-void CMap::init() {
+void CMap::init() 
+{
     
 }

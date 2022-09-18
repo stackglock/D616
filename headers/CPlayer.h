@@ -2,7 +2,8 @@
 
 #include "CEntity.h"
 
-class CPlayer : public CEntity {
+class CPlayer : public CEntity 
+{
 private:
 
     float m_fExp;

@@ -1,7 +1,9 @@
 #pragma once
 
 #include "headers/CEntity.h"
-class CMap {
+
+class CMap 
+{
 private:
     std::vector<CEntity> m_entityList;
 

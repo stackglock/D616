@@ -8,17 +8,17 @@ void CPlayer::listenInput()
             this->movePosition('U');
     } 
     
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
             this->movePosition('D');
     }
 
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
             this->movePosition('L');
     }
 
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
             this->movePosition('R');
     }

@@ -3,7 +3,8 @@
 #include "CTexture.h"
 #include <SFML/Graphics/Sprite.hpp>
 
-class CSprite : public sf::Sprite {
+class CSprite : public sf::Sprite 
+{
 private:
     CTexture *m_texture;
 

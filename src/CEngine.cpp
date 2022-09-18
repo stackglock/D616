@@ -22,17 +22,22 @@
 #include "cmrc.hpp"
 
 
-void CEngine::Input() {
-    m_tInput = new std::thread([this]() {
+void CEngine::Input() 
+{
+    m_tInput = new std::thread([this]() 
+    {
         while(m_pWindow->isOpen()) {
             m_player->listenInput();
         }
     });
 }
 
-void CEngine::Update() {  
-    m_tUpdate = new std::thread([this]() {
-        while(m_pWindow->isOpen()) {
+void CEngine::Update() 
+{  
+    m_tUpdate = new std::thread([this]() 
+    {
+        while(m_pWindow->isOpen()) 
+        {
             while(m_pWindow->pollEvent(m_event)) 
             {
                 if (m_event.type == sf::Event::Closed)
@@ -46,7 +51,8 @@ void CEngine::Update() {
     m_tUpdate->detach();
 }
 
-void CEngine::Render() { 
+void CEngine::Render() 
+{ 
         m_tRender = new std::thread([&](){
 
         while(m_pWindow->isOpen()) 
@@ -64,9 +70,9 @@ void CEngine::Render() {
 
 
 }
-CMRC_DECLARE(resources);
 
-CEngine::CEngine() {
+CEngine::CEngine() 
+{
     m_pWindow = new sf::RenderWindow(sf::VideoMode(m_iWidth, m_iHeight), "D616");
 
     m_pWindow->setActive(false);
@@ -83,13 +89,15 @@ CEngine::CEngine() {
     this->Input();
 
 
-    while(m_pWindow->isOpen()) {
+    while(m_pWindow->isOpen()) 
+    {
 
     }
 
 }
 
-CEngine::~CEngine() {
+CEngine::~CEngine() 
+{
     delete m_tRender; 
     delete m_tUpdate;
     delete m_tInput;

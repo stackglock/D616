@@ -3,7 +3,8 @@
 #include "SFML/Graphics/Texture.hpp"
 #include "cmrc.hpp"
 
-class CTexture : public sf::Texture {
+class CTexture : public sf::Texture 
+{
 private:
 
 public: 

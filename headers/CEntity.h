@@ -8,7 +8,8 @@
 #include <map>
 #include <thread>
 
-class CEntity {
+class CEntity 
+{
 private:
     std::string m_sName;
     std::string m_sTexturePath;
