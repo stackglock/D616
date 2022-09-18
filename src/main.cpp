@@ -1,9 +1,13 @@
 #include <SFML/Graphics.hpp>
-#include "headers/Engine.h"
+#include "CEngine.h"
+#include <thread>
 
-int main()
+int main(int argc, char **argv)
 {
-    Engine engine;
+    CEngine CEngine;
+
+    //QPixmap pix(":/resources/image.png");
+
 
     return 0;
 }
