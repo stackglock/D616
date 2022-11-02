@@ -12,4 +12,6 @@ private:
 public:
     void listenInput();
 
+    CPlayer();
+    ~CPlayer();
 };
