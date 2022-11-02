@@ -14,7 +14,8 @@ CSprite::CSprite(std::string sFileName)
     cmrc::file file = g_resourceManager.getFile(sFileName);
 
     m_texture = new CTexture(file);
-    m_texture->loadFromMemory(file.begin(), file.size());
+    //m_texture->loadFromMemory(file.begin(), file.size());
+    m_texture->load(file);
 
     this->setTexture(*m_texture);
 }
@@ -22,6 +23,8 @@ CSprite::CSprite(std::string sFileName)
 CSprite::~CSprite() 
 {
 
+
     delete m_texture;
 
+    m_texture = nullptr;
 }

@@ -35,12 +35,7 @@ void CEntity::setSpeed(float m_fSpeed)
     this->m_fSpeed = m_fSpeed;
 }
 
-void CEntity::setTexture(sf::Texture m_texture) 
-{
-    this->m_texture = m_texture;
-}
-
-void CEntity::setSprite(sf::Sprite m_sprite) 
+void CEntity::setSprite(sf::Sprite *m_sprite) 
 {
     this->m_sprite = m_sprite;
 }
@@ -65,36 +60,26 @@ float CEntity::getSpeed()
     return this->m_fSpeed;
 }
 
-sf::Texture CEntity::getTexture() 
-{
-    return this->m_texture;
-}
-
 sf::Sprite CEntity::getSprite() 
 {
-    return this->m_sprite;
+    return *this->m_sprite;
 }
 
 void CEntity::updateState() 
 {
-    m_sprite.setPosition(m_position.x, m_position.y);
-}
-
-void CEntity::loadTexture(std::string m_sTexturePath) 
-{
-    m_texture.loadFromFile(m_sTexturePath);
+    m_sprite->setPosition(m_position.x, m_position.y);
 }
 
 void CEntity::drawEntity(sf::RenderWindow *m_pWindow) 
 {
     
-    m_pWindow->draw(m_sprite);
+    m_pWindow->draw(*m_sprite);
 
 }
 
 void CEntity::setPosition(float fX, float fY) 
 {
-    m_sprite.setPosition(fX, fY);
+    m_sprite->setPosition(fX, fY);
 }
 
 void CEntity::movePosition(char cDirection) 

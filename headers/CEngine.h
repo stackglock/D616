@@ -6,8 +6,10 @@
 #include <cstddef>
 #include <thread>
 
+#include "CMap.h"
 #include "CResourceManager.h"
 #include "CPlayer.h"
+#include "CSprite.h"
 
 class CEngine 
 {
@@ -22,9 +24,11 @@ private:
     std::thread *m_tUpdate = nullptr;
     std::thread *m_tInput = nullptr;
 
-public: 
+    CMap *m_pCurrentMap = nullptr;
 
-    CPlayer *m_player = nullptr;
+public: 
+    void initSprites();
+    void freeSprites();
 
     void Input();
     void Update();
@@ -35,3 +39,5 @@ public:
     CEngine();
     ~CEngine();
 };
+
+inline std::map<std::string, CSprite*> g_spriteList;

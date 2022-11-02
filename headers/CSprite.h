@@ -9,7 +9,7 @@ private:
     CTexture *m_texture;
 
 public:
-    void load(CTexture &texture);
+    void load(CTexture& texture);
 
     CSprite(std::string sFileName);
     ~CSprite();

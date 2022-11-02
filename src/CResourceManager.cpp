@@ -25,6 +25,7 @@ cmrc::file CResourceManager::getFile(std::string sFileName)
 void CResourceManager::initResources() 
 {
     this->loadFile("player/player.png");
+    this->loadFile("structures/wall.png");
 }
 
 CResourceManager::CResourceManager() : 

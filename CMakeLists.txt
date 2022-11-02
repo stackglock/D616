@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project(D616)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 include(CMakeRC.cmake)
 
@@ -23,6 +23,7 @@ ALIAS resources::rc
 WHENCE resources 
 NAMESPACE resources 
 
+resources/structures/wall.png
 resources/player/player.png)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
