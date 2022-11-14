@@ -31,7 +31,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_executable(${PROJECT_NAME} ${CPPS} ${HEADERS} ${CPPHEADERS}) 
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${HEADERS_DIR})
-target_include_directories(${PROJECT_NAME} PRIVATE ${SOURCE_DIR})
+# target_include_directories(${PROJECT_NAME} PRIVATE ${HEADERS_DIR})
+# target_include_directories(${PROJECT_NAME} PRIVATE ${SOURCE_DIR})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE sfml-audio sfml-graphics sfml-network sfml-system resources::rc)
